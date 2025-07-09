@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #080808;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        .header-text h1 span {
+            color: #ff004f;
+        }
+        .sub-title {
+            color: #ff004f;
+        }
+        .services-list div:hover {
+            background: linear-gradient(90deg, #ff004f, #ff6a00);
+        }
+        .btn.btn2 {
+            background: #ff004f;
+        }
+        .card-body {
+            transition: all 0.3s ease;
+            transform: translateZ(0);
+        }
+        .card-body:hover {
+            background: #ff004f;
+            color: #fff;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+        .section-title {
+            color: #ff004f;
+            font-weight: bold;
+        }
+        .active-link {
+            color: #ff004f;
+            cursor: pointer;
+        }
+        .active-link:hover {
+            text-decoration: underline;
+        }
+        .social-icons a {
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #ff004f;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .card {
+            transform: perspective(500px) rotateY(0deg) scale(1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: perspective(500px) rotateY(10deg) scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+   
+    <div id="header" class="d-flex align-items-center justify-content-center" style="height: 100vh; background: url('your-image.jpg') no-repeat center center; background-size: cover;">
+        <div class="container text-center">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#header">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header-text text-white">
+                <h1>Hi, I'm <span>Rupam Baral</span><br>From West Bengal, India</h1>
+                <p>BCA Student</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="about" class="container py-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="images/72791116010-removebg-preview.png" alt="About Me" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-md-8">
+                <h2 class="sub-title">About Me</h2>
+                <p>👋Hello! I'm Rupam Baral – a passionate and driven second-year BCA student with a love for technology and its power to address real-world challenges. My studies have provided me with a solid grounding in software development, database management, and system analysis, as well as strong proficiency in programming languages like C++ and Python. I'm eager to collaborate on projects that reshape our digital world. Let's connect!</p>
+                <div class="d-flex">
+                    <p class="me-5 active-link" onclick="showSection('skills')">Skills</p>
+                    <p class="me-5 active-link" onclick="showSection('experience')">Experience</p>
+                    <p class="active-link" onclick="showSection('education')">Education</p>
+                </div>
+                <div id="skills" class="section-content" style="display:none;">
+                    <h4>Technical Skills</h4>
+                    <ul>
+                        <li>C, C++, Java</li>
+                        <li>Python</li>
+                        <li>Web Development (HTML, CSS, JavaScript)</li>
+                        <li>Database Management (MySQL, MongoDB)</li>
+                        <li>Version Control (Git, GitHub)</li>
+                        <li>UI/UX Design Principles</li>
+                    </ul>
+                </div>
+                <div id="experience" class="section-content" style="display:none;">
+                    <h4>Work Experience</h4>
+                    <p><strong>Throughout my academic journey and personal projects, I have gained hands-on experience in various fields of technology, focusing primarily on software development, web design, and mobile application development.</strong> </p>
+                    <ul>
+                        <li>Freelance Web Developer (2023 – Present)
+                            I have worked on several freelance projects, helping clients build dynamic and user-friendly websites. My role involved front-end and back-end development, where I utilized HTML, CSS, JavaScript, and frameworks like Bootstrap. This has helped me sharpen my skills in responsive design, website optimization, and user interface design.</li>
+                        <li>Personal Projects (2022 – Present)
+                            I have developed multiple web and mobile applications, including a social media platform and an online shopping website. These projects helped me apply my knowledge of front-end and back-end development, database management, and UI/UX design. I am continuously learning and improving my coding skills to build efficient and scalable applications.</li>
+                    </ul>
+                </div>
+                <div id="education" class="section-content" style="display:none;">
+                    <h4>Education</h4>
+                    <p><strong>Currently pursuing BCA (Bachelor of Computer Applications)</strong> - Lovely Professional University, 2023 - Present</p>
+                    <p><strong>Intermediate</strong> - Secured 1st Rank, 2021</p>
+                    <p><strong>High School</strong> - Completed with Arts, 2019</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="services" class="container py-5">
+        <h2 class="sub-title text-center">My Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card text-center bg-dark">
+                    <div class="card-body">
+                        <i class="fa-solid fa-code fa-3x text-warning"></i>
+                        <h3 class="card-title text-white mt-3">Web Design</h3>
+                        <p class="card-text">Designing user-friendly and visually appealing websites.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center bg-dark">
+                    <div class="card-body">
+                        <i class="fa-solid fa-crop-simple fa-3x text-warning"></i>
+                        <h3 class="card-title text-white mt-3">UI/UX Design</h3>
+                        <p class="card-text">Creating intuitive and interactive user interfaces.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center bg-dark">
+                    <div class="card-body">
+                        <i class="fa-brands fa-app-store fa-3x text-warning"></i>
+                        <h3 class="card-title text-white mt-3">App Design</h3>
+                        <p class="card-text">Building efficient and engaging mobile applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div id="portfolio" class="container py-5">
+    <h2 class="sub-title text-center">My Work</h2>
+    <div class="row g-4">
+
+        
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/gymlogo.jpeg" class="card-img-top" alt="Fitness Gym Website">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Fitness Gym Website</h5>
+                    <a href="project.html" class="btn btn-primary" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+        
+       
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/fast-food-restaurant-logo,-restaurant-logo-design-template-33255790cb8e1186b28609dd9afd4ee6_screen.jpg" class="card-img-top" alt="Restaurant Website">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Restaurant Website</h5>
+                    <a href="restaurant.html" class="btn btn-primary" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="text-center mt-4">
+        <a href="portfolio.html" class="btn btn-danger" target="_blank">See More</a>
+    </div>
+</div>
+
+
+   
+    <div id="contact" class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="sub-title">Contact Me</h2>
+                <p><i class="fa-solid fa-paper-plane"></i> rupambaral2003@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> +91 8918621935</p>
+                <div class="social-icons mt-3">
+                    <a href="#" class="text-white me-3"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="RUPAM CV1.pdf" download class="btn btn2 mt-3">Download CV</a>
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+                    <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+                    <textarea class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+  
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Rupam Baral. All rights reserved.</p>
+        </div>
+    </footer>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function showSection(section) {
+          
+            document.querySelectorAll('.section-content').forEach(function(sectionContent) {
+                sectionContent.style.display = 'none';
+            });
+
+           
+            document.getElementById(section).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
